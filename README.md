@@ -1,6 +1,6 @@
-# AAR RailroadPM 2.0 Site
+# AAR RailroadPM 2.0 Site - Under Construction
 
-This site was originally created by cloning the [Netlify One-Click Hugo CMS project](https://github.com/netlify-templates/one-click-hugo-cms). The relevant information from the original README file appears below.
+This site was originally created by cloning the [Netlify One-Click Hugo CMS project](https://github.com/netlify-templates/one-click-hugo-cms). The relevant information from the original README file appears below, with a few edits to clarify and adapt the content to the **RailroadPM** project.
 
 ## Hugo Template for Netlify CMS with Netlify Identity
 
