@@ -10,9 +10,10 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/participant"
     create: true
     fields:
-      - {label: "Short Name", name: "shortname", widget: "string"}
+      - {label: "Short Name", name: "title", widget: "string"}
       - {label: "Long Name", name: "longname", widget: "string"}
       - {label: "Copyright Text", name: "copyright", widget: "text"}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
   - name: "post" # Used in routes, ie.: /extranet/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
