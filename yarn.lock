@@ -1802,6 +1802,10 @@ dev-ip@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/dev-ip/-/dev-ip-1.0.1.tgz#a76a3ed1855be7a012bb8ac16cb80f3c00dc28f0"
 
+diacritics@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/diacritics/-/diacritics-1.3.0.tgz#3efa87323ebb863e6696cebb0082d48ff3d6f7a1"
+
 diffie-hellman@^5.0.0:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/diffie-hellman/-/diffie-hellman-5.0.2.tgz#b5835739270cfe26acf632099fded2a07f209e5e"
@@ -4436,12 +4440,13 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-netlify-cms@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.0.3.tgz#444dde9d70c33e06a169439514d74ea7f604cd7c"
+netlify-cms@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.4.0.tgz#6ed3048ac6b2e829e1eaafab32230ab1ddb12bc5"
   dependencies:
     classnames "^2.2.5"
     create-react-class "^15.6.0"
+    diacritics "^1.3.0"
     fuzzy "^0.1.1"
     gotrue-js "^0.9.15"
     gray-matter "^3.0.6"
@@ -4496,7 +4501,6 @@ netlify-cms@^1.0.2:
     slate-plain-serializer "^0.4.0"
     slate-react "0.10.11"
     slate-soft-break "^0.6.0"
-    slug "^0.9.1"
     toml-j0.4 "^1.1.1"
     tomlify-j0.4 "^3.0.0-alpha.0"
     unified "^6.1.4"
@@ -6627,12 +6631,6 @@ slice-ansi@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
 
-slug@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/slug/-/slug-0.9.1.tgz#af08f608a7c11516b61778aa800dce84c518cfda"
-  dependencies:
-    unicode ">= 0.3.1"
-
 sniffr@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/sniffr/-/sniffr-1.1.4.tgz#c57fa9fc1e8fccc47432be3764ca33b79698e0e8"
@@ -7229,10 +7227,6 @@ unherit@^1.0.4:
   dependencies:
     inherits "^2.0.1"
     xtend "^4.0.1"
-
-"unicode@>= 0.3.1":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/unicode/-/unicode-10.0.0.tgz#e5d51c1db93b6c71a0b879e0b0c4af7e6fdf688e"
 
 unified@^6.1.4:
   version "6.1.6"
