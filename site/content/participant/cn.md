@@ -6,5 +6,6 @@ copyright: >-
   reproduced or republished without permission. Train Speed and Terminal Dwell
   statistics are produced and maintained by Canadian National Railway; Cars on
   Line data are produced by Railinc and maintained by the AAR.
+logo: /img/cn_logo.gif
 ---
 
