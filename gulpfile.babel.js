@@ -17,7 +17,7 @@ const hugoBin = `./bin/hugo.${process.platform === "win32" ? "exe" : process.pla
 const defaultArgs = ["-d", "../dist", "-s", "site"];
 
 if (process.env.DEBUG) {
-  defaultArgs.unshift("--debug")
+  defaultArgs.unshift("--debug");
 }
 
 gulp.task("hugo", (cb) => buildSite(cb));
@@ -27,19 +27,21 @@ gulp.task("build-preview", ["css", "js", "cms-assets", "hugo-preview"]);
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
-    .pipe(postcss([
-      cssImport({from: "./src/css/main.css"}),
-      cssnext(),
-      cssnano(),
-    ]))
-    .pipe(gulp.dest("./dist/css"))
-    .pipe(browserSync.stream())
+  .pipe(postcss([
+    cssImport({
+      from: "./src/css/main.css"
+    }),
+    cssnext(),
+    cssnano(),
+  ]))
+  .pipe(gulp.dest("./dist/css"))
+  .pipe(browserSync.stream())
 ));
 
 gulp.task("cms-assets", () => (
   gulp.src("./node_modules/netlify-cms/dist/*.{woff,eot,woff2,ttf,svg,png}")
-    .pipe(gulp.dest("./dist/css"))
-))
+  .pipe(gulp.dest("./dist/css"))
+));
 
 gulp.task("js", (cb) => {
   const myConfig = Object.assign({}, webpackConfig);
@@ -59,7 +61,9 @@ gulp.task("svg", () => {
   const svgs = gulp
     .src("site/static/img/icons-*.svg")
     .pipe(svgmin())
-    .pipe(svgstore({inlineSvg: true}));
+    .pipe(svgstore({
+      inlineSvg: true
+    }));
 
   function fileContents(filePath, file) {
     return file.contents.toString();
@@ -67,7 +71,9 @@ gulp.task("svg", () => {
 
   return gulp
     .src("site/layouts/partials/svg.html")
-    .pipe(inject(svgs, {transform: fileContents}))
+    .pipe(inject(svgs, {
+      transform: fileContents
+    }))
     .pipe(gulp.dest("site/layouts/partials/"));
 });
 
@@ -86,7 +92,9 @@ gulp.task("server", ["hugo", "css", "cms-assets", "js", "svg"], () => {
 function buildSite(cb, options) {
   const args = options ? defaultArgs.concat(options) : defaultArgs;
 
-  return cp.spawn(hugoBin, args, {stdio: "inherit"}).on("close", (code) => {
+  return cp.spawn(hugoBin, args, {
+    stdio: "inherit"
+  }).on("close", (code) => {
     if (code === 0) {
       browserSync.reload("notify:false");
       cb();
