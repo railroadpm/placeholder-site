@@ -14,6 +14,13 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Long Name", name: "longname", widget: "string"}
       - {label: "Copyright Text", name: "copyright", widget: "text"}
       - {label: "Logo", name: "logo", widget: "image", required: false}
+  - name: "report"
+    label: "Weekly Report"
+    folder: "site/content/report"
+    create: true
+    fields:
+      - {label: "Railroad", name: "railroad", widget: "relation", collection: "participant", searchFields: ["title"], valueField: "title" }
+      - {label: "Cars Online", name: "COL", widget: "number", valueType: "int"}
   - name: "post" # Used in routes, ie.: /extranet/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
