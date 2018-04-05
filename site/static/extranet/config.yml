@@ -19,6 +19,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/report"
     create: true
     fields:
+      - {label: "Report Year and Week Number (e.g., YYYY-W001)", name: "title", widget: "string"}
       - {label: "Railroad", name: "railroad", widget: "relation", collection: "participant", searchFields: ["title", "longname"], valueField: "title"}
       - {label: "Cars Online (COL)", name: "COL", widget: "number", valueType: "int"}
   - name: "post" # Used in routes, ie.: /extranet/collections/:slug/edit
