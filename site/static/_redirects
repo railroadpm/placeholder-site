@@ -1,3 +1,0 @@
-# Netlify redirects. See: https://www.netlify.com/docs/redirects/
-/admin                /extranet/
-/extranet             /extranet/
