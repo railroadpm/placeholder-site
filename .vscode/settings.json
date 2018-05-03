@@ -10,5 +10,24 @@
     "bin": true,
     "dist": true,
     "node_modules": true
+  },
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript",
+        "json"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautify"
+      ]
+    },
+    "css": [
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html"
+    ]
   }
 }
