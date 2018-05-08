@@ -3,7 +3,10 @@
   {{ partial "head" . }}
   <body class="sans-serif">
     {{ partial "nav" . }}
-    {{ block "main" . }}{{ end }} 
+
+    {{ block "main" . }}
+    {{ end }} 
+    
     {{ partial "footer" . }} 
   </body>
 </html>

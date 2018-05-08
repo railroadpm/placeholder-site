@@ -11,6 +11,9 @@
     "dist": false,
     "node_modules": true
   },
+  "files.associations": {
+    "**/layouts/**/*.html": "gohtml"
+  },
   "beautify.language": {
     "js": {
       "type": [
