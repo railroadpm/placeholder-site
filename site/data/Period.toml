@@ -1,0 +1,38 @@
+# Period.toml: Lookup data for date dimensions
+[Quarter]
+Current = "2Q18"
+Previous = "1Q18"
+
+[Month]
+Current = "May 2018"
+Previous = "Apr 2018"
+
+[WeeklyReportEnd]
+On = "Friday"
+At = "11:59pm"
+
+[WeeklyPublishing]
+On = "Wednesday"
+At = "02:00pm"
+
+[[Week]]
+Key = "20180427"
+Day = "04/27/18"
+Month = "Apr 2018"
+Qtr = "2Q18"
+
+[[Week]]
+Key = "20180420"
+Day = "04/20/18"
+Month = "Apr 2018"
+Qtr = "2Q18"
+
+[[Week]]
+Key = "20180413"
+Day = "04/13/18"
+Month = "Apr 2018"
+Qtr = "2Q18"
+Archived = true
+
+# ...and so on
+# The [[Week]]s will be auto-generated as part of the build process
