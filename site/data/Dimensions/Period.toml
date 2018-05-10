@@ -1,4 +1,5 @@
 # Period.toml: Lookup data for date dimensions
+# TODO: Auto-generate [Quarter], [Month], and [[Week]]s as part of the build process
 [Quarter]
 Current = "2Q18"
 Previous = "1Q18"
@@ -7,15 +8,6 @@ Previous = "1Q18"
 Current = "May 2018"
 Previous = "Apr 2018"
 
-[WeeklyReport.Ends]
-On = "Friday"
-At = "11:59pm"
-
-[WeeklyReport.Published]
-On = "Wednesday"
-At = "02:00pm"
-
-# TODO: Auto-generate [[Week]]s as part of the build process
 [[Week]]
 Key = '20180428'
 Day = '04/28/18'
