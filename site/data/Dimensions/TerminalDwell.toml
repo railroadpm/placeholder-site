@@ -1,4 +1,4 @@
-# TerminalDwell.toml: Lookup data for categorical dimensions
+# TerminalDwell.toml: Lookup data for location dimensions
 Key = 'TerminalDwell'
 MeasureHeading = 'Terminal Dwell (Hours)'
 DefinitionHeading = 'Terminal Dwell (Hours)'
@@ -13,6 +13,108 @@ DefinitionVerbiage = '''
 Key = 'BNSF'
 
   [[Terminal]]
+  Key = 'Barstow'
+  CityOrYard = ''
+  Town = ''
+  State = 'CA'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Denver'
+  CityOrYard = 'Denver'
+  Town = ''
+  State = 'CO'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'FortWorth'
+  CityOrYard = 'Fort Worth'
+  Town = ''
+  State = 'TX'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Galesburg'
+  CityOrYard = 'Galesburg'
+  Town = ''
+  State = 'IL'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Houston'
+  CityOrYard = 'Houston'
+  Town = ''
+  State = 'TX'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'KansasCity'
+  CityOrYard = 'Kansas City'
+  Town = ''
+  State = 'KS'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Lincoln'
+  CityOrYard = 'Lincoln'
+  Town = ''
+  State = 'NE'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Memphis'
+  CityOrYard = 'Memphis'
+  Town = ''
+  State = 'TN'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Northtown'
+  CityOrYard = 'Northtown'
+  Town = ''
+  State = 'MN'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Pasco'
+  CityOrYard = 'Pasco'
+  Town = ''
+  State = 'WA'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = 'Tulsa'
+  CityOrYard = 'Tulsa'
+  Town = ''
+  State = 'OK'
+  Country = 'USA'
+  Lat = ''
+  Lon = ''
+
+[CN]
+Key = 'CN'
+
+  [[Terminal]]
   Key = ''
   CityOrYard = ''
   Town = ''
@@ -21,8 +123,68 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-[CN]
-Key = 'CN'
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
 
   [[Terminal]]
   Key = ''
@@ -45,6 +207,69 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
 [NS]
 Key = 'NS'
 
@@ -57,8 +282,233 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
 [UP]
 Key = 'UP'
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
+
+  [[Terminal]]
+  Key = ''
+  CityOrYard = ''
+  Town = ''
+  State = ''
+  Country = ''
+  Lat = ''
+  Lon = ''
 
   [[Terminal]]
   Key = ''
