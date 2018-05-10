@@ -1,14 +1,20 @@
-[20180427]
-End = "04/27/18"
+[Ending_20180427]
+Key = "20180427"
+Day = "04/27/18"
 Month = "Apr 2018"
 Qtr = "2Q18"
+Visible = true
 
-[20180420]
-End = "04/20/18"
+[Ending_20180420]
+Key = "20180420"
+Day = "04/20/18"
 Month = "Apr 2018"
 Qtr = "2Q18"
+Visible = true
 
-[20180413]
-End = "04/13/18"
+[Ending_20180413]
+Key = "20180413"
+Day = "04/13/18"
 Month = "Apr 2018"
 Qtr = "2Q18"
+Visible = true
