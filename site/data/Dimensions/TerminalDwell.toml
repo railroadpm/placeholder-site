@@ -3,11 +3,11 @@ Key = 'TerminalDwell'
 MeasureHeading = 'Terminal Dwell (Hours)'
 DefinitionHeading = 'Terminal Dwell (Hours)'
 DefinitionVerbiage = '''
-    Terminal Dwell is the average time a car resides at the specified terminal location expressed in hours.
-    The measurement begins with a customer release, received interchange, or train arrival event
-    and ends with a customer placement (actual or constructive), delivered or offered in interchange, or train departure event.
-    Cars that move through a terminal on a run-through train are excluded, as are stored, bad ordered, and maintenance of way cars.
-  '''
+  Terminal Dwell is the average time a car resides at the specified terminal location expressed in hours.
+  The measurement begins with a customer release, received interchange, or train arrival event
+  and ends with a customer placement (actual or constructive), delivered or offered in interchange, or train departure event.
+  Cars that move through a terminal on a run-through train are excluded, as are stored, bad ordered, and maintenance of way cars.
+'''
 
 [BNSF]
 Key = 'BNSF'

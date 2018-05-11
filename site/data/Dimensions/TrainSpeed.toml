@@ -4,10 +4,10 @@ Key = 'TrainSpeed'
 MeasureHeading = 'Train Speed (Miles per Hour)'
 DefinitionHeading = 'Train Speed'
 DefinitionVerbiage = '''
-    Train Speed measures the line-haul movement between terminals. The average speed is calculated by dividing train-miles by total hours operated,
-    excluding yard and local trains, passenger trains, maintenance of way trains, and terminal time.
-    System-wide average train speeds are given for the following train types:
-  '''
+  Train Speed measures the line-haul movement between terminals. The average speed is calculated by dividing train-miles by total hours operated,
+  excluding yard and local trains, passenger trains, maintenance of way trains, and terminal time.
+  System-wide average train speeds are given for the following train types:
+'''
 
 [Train]
 Key = 'ByTrainType'

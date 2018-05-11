@@ -4,11 +4,12 @@ Key = 'CarsOnLine'
 MeasureHeading = 'Cars on Line'
 DefinitionHeading = 'Cars On Line'
 DefinitionVerbiage = '''
-    Cars On Line is the average of the daily on-line inventory of freight cars. Articulated cars are counted as a single unit.
-    Cars on private tracks (e.g., at a customer's facility) are counted on the last railroad on which they were located.
-    Maintenance of way cars are excluded.<br>
-    Cars on Line figures are reported by car type and by car ownership:
-  '''
+  Cars On Line is the average of the daily on-line inventory of freight cars. Articulated cars are counted as a single unit.
+  Cars on private tracks (e.g., at a customer's facility) are counted on the last railroad on which they were located.
+  Maintenance of way cars are excluded.
+  <br>
+  Cars on Line figures are reported by car type and by car ownership:
+'''
 
 [Owner]
 Key = 'ByOwner'
