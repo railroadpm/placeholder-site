@@ -343,4 +343,4 @@ Key = '20170408'
 Day = '04/08/17'
 Month = 'Apr 2017'
 Qtr = '2Q17'
-Archived = true
+Hidden = true
