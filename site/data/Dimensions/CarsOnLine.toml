@@ -12,7 +12,7 @@ DefinitionVerbiage = '''
 '''
 
 [Owner]
-Key = 'ByOwner'
+Key = 'ByCarOwner'
 MeasureHeading = 'By Car Owner'
 TypeDefinitionHeading = 'Owner Type'
 TypeDescriptionHeading = 'Description'
@@ -24,7 +24,7 @@ TypeDescriptionHeading = 'Description'
   Description = 'Owned by the railroad on which it is located'
 
   [[Type]]
-  Key = 'Foreign'
+  Key = 'ForeignRR'
   ShortName = 'Foreign RR'
   LongName = 'Foreign RR'
   Description = 'Owned by a railroad other than the one on which it is located'
@@ -36,7 +36,7 @@ TypeDescriptionHeading = 'Description'
   Description = 'Owned by a non-railroad (i.e., has a car initial that ends in "X") and not leased to a railroad'
 
 [Car]
-Key = 'ByType'
+Key = 'ByCarType'
 MeasureHeading = 'By Car Type'
 TypeDefinitionHeading = 'Car Type'
 TypeDescriptionHeading = 'AAR Mechanical Designation'

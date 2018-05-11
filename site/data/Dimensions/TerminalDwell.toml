@@ -111,6 +111,10 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
+  [[Terminal]]
+  Key = 'EntireRailroad'
+  CityOrYard = 'Entire Railroad'
+
 [CN]
 Key = 'CN'
 
@@ -195,6 +199,10 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
+  [[Terminal]]
+  Key = 'EntireRailroad'
+  CityOrYard = 'Entire Railroad'
+
 [KCS]
 Key = 'KCS'
 
@@ -269,6 +277,10 @@ Key = 'KCS'
   Country = 'MEX'
   Lat = ''
   Lon = ''
+
+  [[Terminal]]
+  Key = 'EntireRailroad'
+  CityOrYard = 'Entire Railroad'
 
 [NS]
 Key = 'NS'
@@ -399,6 +411,10 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
+  [[Terminal]]
+  Key = 'EntireRailroad'
+  CityOrYard = 'Entire Railroad'
+
 [UP]
 Key = 'UP'
 
@@ -518,3 +534,7 @@ Key = 'UP'
   Country = 'USA'
   Lat = ''
   Lon = ''
+
+  [[Terminal]]
+  Key = 'EntireRailroad'
+  CityOrYard = 'Entire Railroad'
