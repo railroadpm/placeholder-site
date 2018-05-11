@@ -86,7 +86,7 @@ gulp.task('server', ['hugo', 'css', 'cms-assets', 'js', 'svg'], () => {
   gulp.watch('./src/js/**/*.js', ['js']);
   gulp.watch('./src/css/**/*.css', ['css']);
   gulp.watch('./site/static/img/icons-*.svg', ['svg']);
-  gulp.watch('./site/**/*', ['hugo']);
+  gulp.watch('./site/**/*', ['hugo', 'css', 'cms-assets', 'js', 'svg']);
 });
 
 function buildSite(cb, options) {

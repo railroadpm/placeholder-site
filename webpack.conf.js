@@ -1,10 +1,9 @@
 import webpack from "webpack";
 import path from "path";
 
-export default {
+const webpackConfig = {
   module: {
-    loaders: [
-      {
+    loaders: [{
         test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
         loader: "file-loader?name=/[hash].[ext]"
       },
@@ -12,7 +11,9 @@ export default {
         loader: "babel-loader",
         test: /\.js?$/,
         exclude: /node_modules/,
-        query: {cacheDirectory: true}
+        query: {
+          cacheDirectory: true
+        }
       }
     ]
   },
@@ -33,5 +34,35 @@ export default {
     publicPath: "/",
     filename: "[name].js"
   },
-  externals:  [/^vendor\/.+\.js$/]
+  externals: [/^vendor\/.+\.js$/]
 };
+
+const isDevelopmentEnv = true;
+
+if (!!process.env.UGLIFY) {
+  const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+
+  webpackConfig.plugins.push(new UglifyJSPlugin({
+    uglifyOptions: {
+      ecma: 8,
+      warnings: false,
+      output: {
+        comments: false,
+        beautify: false
+      },
+      compress: {
+        drop_console: true
+      },
+      toplevel: false,
+      nameCache: null,
+      ie8: false,
+      keep_classnames: undefined,
+      keep_fnames: false,
+      safari10: false,
+    }
+  }));
+
+  console.log('Uglifyjs added to webpack config');
+}
+
+export default webpackConfig;

@@ -8,8 +8,11 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "bin": true,
-    "dist": true,
+    "dist": false,
     "node_modules": true
+  },
+  "files.associations": {
+    "**/layouts/**/*.html": "gohtml"
   },
   "beautify.language": {
     "js": {
