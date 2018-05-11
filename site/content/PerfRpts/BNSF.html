@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RPM</title>
+</head>
+
+<body>
+
+  {{ $prpt_verbiage := .Site.Data.Dimensions.Participant.Verbiage }}
+  {{ $bnsf := index (where .Site.Data.Dimensions.Participant.Railroad "Key" "BNSF") 0 }}
+
+  {{ with $bnsf }}
+    {{ . }}
+    <br><br>
+
+    {{ .Logo }}
+
+
+    <br><br>
+    <br><br>
+
+
+    <img src="{{ .Logo }}" alt="BNSF Logo">
+    <h2>{{ .ShortName }}</h2>
+    <h2>Weekly Performance Report</h2>
+
+    <p>
+      <hr>
+      {{ $prpt_verbiage | markdownify }}
+      <hr>
+    </p>
+
+    <br><br>
+
+    <footer>
+      {{ .Copyright | markdownify }}
+    </footer>
+
+  {{ end }}
+
+
+</body>
+
+</html>

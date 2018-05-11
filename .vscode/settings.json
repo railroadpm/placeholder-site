@@ -12,7 +12,8 @@
     "node_modules": true
   },
   "files.associations": {
-    "**/layouts/**/*.html": "gohtml"
+    "**/layouts/**/*.html": "gohtml",
+    "**/PerfRpts/**/*.html": "gohtml",
   },
   "beautify.language": {
     "js": {

@@ -1,9 +1,10 @@
 # Participant.toml: Lookup data for participating party (person or org) dimensions
+#   NOTE: In various places we may abbreviate 'participant' as 'prpt'
 Key = 'Participant'
 Verbiage = '''
   All five railroads use the same definitions to calculate their performance data, ensuring a high degree of consistency of the measurements.
   However, these measures are most useful for examining trends and relative changes, and least useful as absolutes.
-  <br>
+  <br><br>
   The level of one railroad's performance relative to another's may differ sharply because each railroad is unique.
   Differences between railroads include terrain, physical routes and network design, traffic mix and volume, the extent of passenger operations,
   and operational practices. External factors such as weather and port operations can also cause variations between railroads and over time.
