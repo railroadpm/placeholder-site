@@ -10,22 +10,31 @@
 
 <body>
 
+  {{ $weekly_rpt_config := .Site.Data.Config.WeeklyReport }}
+  {{ $weeks_count_current := $weekly_rpt_config.Displayed.CountOfWeeks.Current }}
+  {{ $weeks_count_historical := $weekly_rpt_config.Displayed.CountOfWeeks.Historical }}
+
+  {{ $params := (dict "Pcpt" "BNSF" "WeeksCountCurrent" $weeks_count_current "WeeksCountHistorical" $weeks_count_historical) }}
+
   {{ $prpt_verbiage := .Site.Data.Dimensions.Participant.Verbiage }}
-  {{ $bnsf := index (where .Site.Data.Dimensions.Participant.Railroad "Key" "BNSF") 0 }}
+  {{ $prpt := index (where .Site.Data.Dimensions.Participant.Railroad "Key" $params.Pcpt) 0 }}
+  {{ $weeks_all := .Site.Data.Dimensions.Period.Week }}
+  {{ $weeks_visible := sort (where $weeks_all "Hidden" "ne" true) "Key" "asc" }}
+  
+  {{ $weeks_historical := last $weeks_count_historical $weeks_visible }}
+  {{ $weeks_current := last $weeks_count_current $weeks_visible }}
 
-  {{ with $bnsf }}
-    {{ . }}
+    {{ $prpt }}
+    <br><br>
+    {{ $prpt.Logo }}
+
+
+    <br><br>
     <br><br>
 
-    {{ .Logo }}
 
-
-    <br><br>
-    <br><br>
-
-
-    <img src="{{ .Logo }}" alt="BNSF Logo">
-    <h2>{{ .ShortName }}</h2>
+    <img src="{{ $prpt.Logo }}" alt="{{ $prpt.Key }} Logo">
+    <h2>{{ $prpt.ShortName }}</h2>
     <h2>Weekly Performance Report</h2>
 
     <p>
@@ -36,12 +45,17 @@
 
     <br><br>
 
+
+      {{ range $weeks_current }}
+        {{ .Day }}<br>
+      {{ end }}
+
+
+    <br><br>
+
     <footer>
-      {{ .Copyright | markdownify }}
+      {{ $prpt.Copyright | markdownify }}
     </footer>
-
-  {{ end }}
-
 
 </body>
 
