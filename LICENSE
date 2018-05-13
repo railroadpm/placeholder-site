@@ -1,17 +1,24 @@
-Where not otherwise indicated on the railroad data visible on the running website,
-site content is Copyright (c) 2018 Association of American Railroads (AAR) <media@aar.org>
+Where not otherwise indicated on the site data visible on the running website (railroad data)
+produced by building and deploying the source code in this repository (repo), site data is:
 
-Terms and Conditions of Use
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  Copyright (c) 2018 Association of American Railroads (AAR) <media@aar.org>
+  
+Site data is defined as the contents of the files in this repo with the following
+file extensions:
 
+  .toml,
+  .yaml, and
+  .json
 
-Netlify software is Copyright (c) 2016 Netlify <hello@netlify.com>
+Netlify software is:
+
+  Copyright (c) 2016 Netlify <hello@netlify.com>
+
+For all open source software projects referenced/used by this repo, please see the
+project's original repository for the complete License statement applicable to
+the project's source code.
+
+For all other files in this repository the following License applies.
 
 MIT License
 
