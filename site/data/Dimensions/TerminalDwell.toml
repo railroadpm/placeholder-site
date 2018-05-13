@@ -12,7 +12,7 @@ DefinitionVerbiage = '''
 [BNSF]
 Key = 'BNSF'
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Barstow'
   CityOrYard = ''
   Town = ''
@@ -21,7 +21,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Denver'
   CityOrYard = 'Denver'
   Town = ''
@@ -30,7 +30,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'FortWorth'
   CityOrYard = 'Fort Worth'
   Town = ''
@@ -39,7 +39,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Galesburg'
   CityOrYard = 'Galesburg'
   Town = ''
@@ -48,7 +48,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Houston'
   CityOrYard = 'Houston'
   Town = ''
@@ -57,7 +57,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'KansasCity'
   CityOrYard = 'Kansas City'
   Town = ''
@@ -66,7 +66,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Lincoln'
   CityOrYard = 'Lincoln'
   Town = ''
@@ -75,7 +75,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Memphis'
   CityOrYard = 'Memphis'
   Town = ''
@@ -84,7 +84,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Northtown'
   CityOrYard = 'Northtown'
   Town = ''
@@ -93,7 +93,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Pasco'
   CityOrYard = 'Pasco'
   Town = ''
@@ -102,7 +102,7 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'Tulsa'
   CityOrYard = 'Tulsa'
   Town = ''
@@ -111,14 +111,14 @@ Key = 'BNSF'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[BNSF.Terminal]]
   Key = 'EntireRailroad'
   CityOrYard = 'Entire Railroad'
 
 [CN]
 Key = 'CN'
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'HarrisonYard'
   CityOrYard = 'Harrison Yard'
   Town = 'Memphis'
@@ -127,7 +127,7 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'FDLYard'
   CityOrYard = 'Fond du Lac Yard'
   Town = ''
@@ -136,7 +136,7 @@ Key = 'CN'
   Lat = '43.8097309'
   Lon = '-88.4796321'
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'JacksonYard'
   CityOrYard = 'Jackson Yard'
   Town = ''
@@ -145,7 +145,7 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'MacMillanYard'
   CityOrYard = 'MacMillan Yard'
   Town = 'Toronto'
@@ -154,7 +154,7 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'MarkhamYard'
   CityOrYard = 'Markham Yard'
   Town = ''
@@ -163,7 +163,7 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'SymingtonYard'
   CityOrYard = 'Symington Yard'
   Town = 'Winnipeg'
@@ -172,7 +172,7 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'TascherauYard'
   CityOrYard = 'Tascherau Yard'
   Town = 'Montreal'
@@ -181,7 +181,7 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'ThorntonYard'
   CityOrYard = 'Thornton Yard'
   Town = 'Vancouver'
@@ -190,7 +190,7 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'WalkerYard'
   CityOrYard = 'Walker Yard'
   Town = 'Edmonton'
@@ -199,14 +199,14 @@ Key = 'CN'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[CN.Terminal]]
   Key = 'EntireRailroad'
   CityOrYard = 'Entire Railroad'
 
 [KCS]
 Key = 'KCS'
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'Jackson'
   CityOrYard = 'Jackson'
   Town = ''
@@ -215,7 +215,7 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'KansasCity'
   CityOrYard = 'Kansas City'
   Town = ''
@@ -224,7 +224,7 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'Laredo'
   CityOrYard = 'Laredo'
   Town = ''
@@ -233,7 +233,7 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'Shreveport'
   CityOrYard = 'Shreveport'
   Town = ''
@@ -242,7 +242,7 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'Monterrey'
   CityOrYard = 'Monterrey'
   Town = ''
@@ -251,7 +251,7 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'NuevoLaredo'
   CityOrYard = 'Nuevo Laredo'
   Town = ''
@@ -260,7 +260,7 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'SanLuisPotosi'
   CityOrYard = 'San Luis Potosi'
   Town = ''
@@ -269,7 +269,7 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'Sanchez'
   CityOrYard = 'Sanchez'
   Town = ''
@@ -278,14 +278,14 @@ Key = 'KCS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[KCS.Terminal]]
   Key = 'EntireRailroad'
   CityOrYard = 'Entire Railroad'
 
 [NS]
 Key = 'NS'
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Allentown'
   CityOrYard = 'Allentown'
   Town = ''
@@ -294,7 +294,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Bellevue'
   CityOrYard = 'Bellevue'
   Town = ''
@@ -303,7 +303,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Birmingham'
   CityOrYard = 'Birmingham'
   Town = ''
@@ -312,7 +312,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Chattanooga'
   CityOrYard = 'Chattanooga'
   Town = ''
@@ -321,7 +321,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Columbus'
   CityOrYard = 'Columbus'
   Town = ''
@@ -330,7 +330,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Conway'
   CityOrYard = 'Conway'
   Town = ''
@@ -339,7 +339,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Decatur'
   CityOrYard = 'Decatur'
   Town = ''
@@ -348,7 +348,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Elkhart'
   CityOrYard = 'Elkhart'
   Town = ''
@@ -357,7 +357,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Atlanta'
   CityOrYard = 'Atlanta'
   Town = ''
@@ -366,7 +366,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Linwood'
   CityOrYard = 'Linwood'
   Town = ''
@@ -375,7 +375,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Macon'
   CityOrYard = 'Macon'
   Town = ''
@@ -384,7 +384,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'NewOrleans'
   CityOrYard = 'New Orleans'
   Town = ''
@@ -393,7 +393,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Roanoke'
   CityOrYard = 'Roanoke'
   Town = ''
@@ -402,7 +402,7 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'Sheffield'
   CityOrYard = 'Sheffield'
   Town = ''
@@ -411,14 +411,14 @@ Key = 'NS'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[NS.Terminal]]
   Key = 'EntireRailroad'
   CityOrYard = 'Entire Railroad'
 
 [UP]
 Key = 'UP'
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'Chicago'
   CityOrYard = 'Chicago'
   Town = 'Proviso'
@@ -427,7 +427,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'FortWorth'
   CityOrYard = 'Fort Worth'
   Town = ''
@@ -436,7 +436,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'Hinkle'
   CityOrYard = 'Hinkle'
   Town = ''
@@ -445,7 +445,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'HoustonEnglewood'
   CityOrYard = 'Houston'
   Town = 'Englewood'
@@ -454,7 +454,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'HoustonSettegast'
   CityOrYard = 'Houston'
   Town = 'Settegast'
@@ -463,7 +463,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'KansasCity'
   CityOrYard = 'Kansas City'
   Town = ''
@@ -472,7 +472,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'Livonia'
   CityOrYard = 'Livonia'
   Town = ''
@@ -481,7 +481,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'NorthLittleRock'
   CityOrYard = 'North Little Rock'
   Town = ''
@@ -490,7 +490,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'NorthPlatteEast'
   CityOrYard = 'North Platte East'
   Town = ''
@@ -499,7 +499,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'NorthPlatteWest'
   CityOrYard = 'North Platte West'
   Town = ''
@@ -508,7 +508,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'PineBluff'
   CityOrYard = 'Pine Bluff'
   Town = ''
@@ -517,7 +517,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'Roseville'
   CityOrYard = 'Roseville'
   Town = ''
@@ -526,7 +526,7 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'WestColton'
   CityOrYard = 'West Colton'
   Town = ''
@@ -535,6 +535,6 @@ Key = 'UP'
   Lat = ''
   Lon = ''
 
-  [[Terminal]]
+  [[UP.Terminal]]
   Key = 'EntireRailroad'
   CityOrYard = 'Entire Railroad'

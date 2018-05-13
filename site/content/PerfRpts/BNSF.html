@@ -20,13 +20,16 @@
   {{ $prpt := index (where .Site.Data.Dimensions.Participant.Railroad "Key" $params.Pcpt) 0 }}
   {{ $weeks_all := .Site.Data.Dimensions.Period.Week }}
   {{ $weeks_visible := sort (where $weeks_all "Hidden" "ne" true) "Key" "asc" }}
-  
+
   {{ $weeks_historical := last $weeks_count_historical $weeks_visible }}
   {{ $weeks_current := last $weeks_count_current $weeks_visible }}
 
-    {{ $prpt }}
-    <br><br>
-    {{ $prpt.Logo }}
+  {{ $cars := .Site.Data.Dimensions.CarsOnLine }}
+  {{ $cars_by_owner := $cars.Owner }}
+  {{ $cars_by_type := $cars.Car }}
+
+  {{ $speed := .Site.Data.Dimensions.TrainSpeed }}
+  {{ $speed_by_type := $speed.Train }}
 
 
     <br><br>
@@ -45,11 +48,33 @@
 
     <br><br>
 
-
       {{ range $weeks_current }}
         {{ .Day }}<br>
       {{ end }}
 
+    <br><br>
+
+      {{ $cars.MeasureHeading }}
+      <br>
+      &nbsp;&nbsp;{{ $cars_by_owner.MeasureHeading }}
+      <br>
+        {{ range $cars_by_owner.Type }}
+          &nbsp;&nbsp;&nbsp;&nbsp;{{ .ShortName }}<br>
+        {{ end }}
+      <br>
+      &nbsp;&nbsp;{{ $cars_by_type.MeasureHeading }}
+      <br>
+        {{ range $cars_by_type.Type }}
+          &nbsp;&nbsp;&nbsp;&nbsp;{{ .ShortName }}<br>
+        {{ end }}
+      <br>
+
+      {{ $speed.MeasureHeading }}
+      <br>
+        {{ range $speed_by_type.Type }}
+          &nbsp;&nbsp;{{ .ShortName }}<br>
+        {{ end }}
+      <br>
 
     <br><br>
 

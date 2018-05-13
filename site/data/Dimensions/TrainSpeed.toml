@@ -12,37 +12,37 @@ DefinitionVerbiage = '''
 [Train]
 Key = 'ByTrainType'
 
-  [[Type]]
+  [[Train.Type]]
   Key = 'Intermodal'
   ShortName = 'Intermodal'
   LongName = 'Intermodal'
   Description = ''
 
-  [[Type]]
+  [[Train.Type]]
   Key = 'Manifest'
   ShortName = 'Manifest'
   LongName = 'Manifest'
   Description = ''
 
-  [[Type]]
+  [[Train.Type]]
   Key = 'Multilevel'
   ShortName = 'Multilevel'
   LongName = 'Multilevel'
   Description = ''
 
-  [[Type]]
+  [[Train.Type]]
   Key = 'CoalUnit'
   ShortName = 'Coal Unit'
   LongName = 'Coal Unit'
   Description = ''
 
-  [[Type]]
+  [[Train.Type]]
   Key = 'GrainUnit'
   ShortName = 'Grain Unit'
   LongName = 'Grain Unit'
   Description = ''
 
-  [[Type]]
+  [[Train.Type]]
   Key = 'AllTrains'
   ShortName = 'All Trains'
   LongName = 'All trains'

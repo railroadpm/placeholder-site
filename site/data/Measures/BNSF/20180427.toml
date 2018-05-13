@@ -29,3 +29,6 @@ TerminalDwell_Northtown = 28.4
 TerminalDwell_Pasco = 25.9
 TerminalDwell_Tulsa = 24.3
 TerminalDwell_EntireRailroad = 26.3
+Revisions = [
+  'CarsOnLine_ByCarType_OpenHopper'
+]

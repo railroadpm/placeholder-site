@@ -17,19 +17,19 @@ MeasureHeading = 'By Car Owner'
 TypeDefinitionHeading = 'Owner Type'
 TypeDescriptionHeading = 'Description'
 
-  [[Type]]
+  [[Owner.Type]]
   Key = 'System'
   ShortName = 'System'
   LongName = 'System Car'
   Description = 'Owned by the railroad on which it is located'
 
-  [[Type]]
+  [[Owner.Type]]
   Key = 'ForeignRR'
   ShortName = 'Foreign RR'
   LongName = 'Foreign RR'
   Description = 'Owned by a railroad other than the one on which it is located'
 
-  [[Type]]
+  [[Owner.Type]]
   Key = 'Private'
   ShortName = 'Private'
   LongName = 'Private'
@@ -41,49 +41,49 @@ MeasureHeading = 'By Car Type'
 TypeDefinitionHeading = 'Car Type'
 TypeDescriptionHeading = 'AAR Mechanical Designation'
 
-  [[Type]]
+  [[Car.Type]]
   Key = 'Box'
   ShortName = 'Box'
   LongName = 'Box'
   Description = 'A, B or R'
   
-  [[Type]]
+  [[Car.Type]]
   Key = 'CoveredHopper'
   ShortName = 'Covered Hopper'
   LongName = 'Covered Hopper'
   Description = 'C'
 
-  [[Type]]
+  [[Car.Type]]
   Key = 'Gondola'
   ShortName = 'Gondola'
   LongName = 'Gondola'
   Description = 'E or G'
 
-  [[Type]]
+  [[Car.Type]]
   Key = 'Intermodal'
   ShortName = 'Intermodal'
   LongName = 'Intermodal'
   Description = 'P, Q or S'
 
-  [[Type]]
+  [[Car.Type]]
   Key = 'Multilevel'
   ShortName = 'Multilevel'
   LongName = 'Multilevel'
   Description = 'V'
 
-  [[Type]]
+  [[Car.Type]]
   Key = 'OpenHopper'
   ShortName = 'Open Hopper'
   LongName = 'Open Hopper'
   Description = 'H, J or K'
 
-  [[Type]]
+  [[Car.Type]]
   Key = 'Tank'
   ShortName = 'Tank'
   LongName = 'Tank'
   Description = 'T'
 
-  [[Type]]
+  [[Car.Type]]
   Key = 'Other'
   ShortName = 'Other'
   LongName = 'Other'
