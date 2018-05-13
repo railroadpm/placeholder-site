@@ -1,24 +1,29 @@
-Where not otherwise indicated on the site data visible on the running website (railroad data)
-produced by building and deploying the source code in this repository (repo), site data is:
+Where not otherwise indicated on the site data visible on the running website produced
+by building and deploying the files in this repository (repo), site data is:
 
   Copyright (c) 2018 Association of American Railroads (AAR) <media@aar.org>
-  
-Site data is defined as the contents of the files in this repo with the following
-file extensions:
+
+A running copy of the website is generally available for review at:
+
+  http://www.railroadpm.org
+
+"Site data" is defined as the names and contents of the files in this repo which have
+the following file extensions:
 
   .toml,
   .yaml, and
   .json
 
-Netlify software is:
+For all third party open source software projects referenced/used by this repo,
+please see the project's original repository for the complete License statement
+applicable to the project's source code.
+
+Specifically, Netlify software is:
 
   Copyright (c) 2016 Netlify <hello@netlify.com>
 
-For all open source software projects referenced/used by this repo, please see the
-project's original repository for the complete License statement applicable to
-the project's source code.
-
-For all other files in this repository the following License applies.
+For all other files in this repository (files that are not part of the "site data" or
+part of a "third party open source software project") the following License applies.
 
 MIT License
 
