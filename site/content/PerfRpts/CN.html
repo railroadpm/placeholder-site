@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RPM</title>
+</head>
+
+<body>
+  {{ $prpt_key := "CN" }}
+  {{ $prpt := index (where .Site.Data.Dimensions.Participant.Railroad "Key" $prpt_key) 0 }}
+
+  <img src="{{ $prpt.Logo }}" alt="{{ $prpt.Key }} Logo">
+  <h2>{{ $prpt.ShortName }}</h2>
+  <h2>Weekly Performance Report</h2>
+
+  <p>
+    <hr>
+    {{ $prpt_verbiage := .Site.Data.Dimensions.Participant.Verbiage }}
+    {{ $prpt_verbiage | markdownify }}
+    <hr>
+  </p>
+
+  <br><br>
+
+  {{ partial "perf_rpts/table" (dict "data" .Site.Data "prptKey" $prpt_key "scratch" $.Scratch) }}
+
+  <br><br>
+
+  <footer>
+    {{ $prpt.Copyright | markdownify }}
+  </footer>
+
+</body>
+
+</html>

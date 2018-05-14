@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RPM</title>
+</head>
+
+<body>
+
+  {{ $weekly_rpt_config := .Site.Data.Config.WeeklyReport }}
+  {{ $weeks_count_current := $weekly_rpt_config.Displayed.CountOfWeeks.Current }}
+  {{ $weeks_count_historical := $weekly_rpt_config.Displayed.CountOfWeeks.Historical }}
+
+  {{ $params := (dict "Prpt" "BNSF" "WeeksCountCurrent" $weeks_count_current "WeeksCountHistorical" $weeks_count_historical) }}
+
+  {{ $prpt_verbiage := .Site.Data.Dimensions.Participant.Verbiage }}
+  {{ $prpt := index (where .Site.Data.Dimensions.Participant.Railroad "Key" $params.Prpt) 0 }}
+  {{ $weeks_all := .Site.Data.Dimensions.Period.Week }}
+  {{ $weeks_visible := sort (where $weeks_all "Hidden" "ne" true) "Key" "asc" }}
+
+  {{ $weeks_historical := last $weeks_count_historical $weeks_visible }}
+  {{ $weeks_current := last $weeks_count_current $weeks_visible }}
+
+  {{ $cars := .Site.Data.Dimensions.CarsOnLine }}
+  {{ $cars_by_owner := $cars.Owner }}
+  {{ $cars_by_owner_subheadings := sort $cars_by_owner.Type "Ord" "asc" }}
+  {{ $cars_by_type := $cars.Car }}
+  {{ $cars_by_type_subheadings := sort $cars_by_type.Type "Ord" "asc" }}
+
+  {{ $speed := .Site.Data.Dimensions.TrainSpeed }}
+  {{ $speed_by_train_type := $speed.Train }}
+  {{ $speed_by_train_type_subheadings := sort $speed_by_train_type.Type "Ord" "asc" }}
+
+  {{ $terminals := .Site.Data.Dimensions.TerminalDwell }}
+  {{ $terminals_for_prpt := index $terminals $params.Prpt }}
+  {{ $terminals_by_city := sort $terminals_for_prpt.Terminal "Ord" "asc" }}
+
+  {{ $prpt_rpts := index .Site.Data.Measures $params.Prpt }}
+
+  <img src="{{ $prpt.Logo }}" alt="{{ $prpt.Key }} Logo">
+  <h2>{{ $prpt.ShortName }}</h2>
+  <h2>Weekly Performance Report</h2>
+
+  <p>
+    <hr>
+    {{ $prpt_verbiage | markdownify }}
+    <hr>
+  </p>
+
+  <br><br>
+
+
+  {{ range $weeks_current }}
+    {{ .Day }}<br>
+  {{ end }}
+
+  <br><br>
+
+  {{ $cars.MeasureHeading }}
+  <br>
+  &nbsp;&nbsp;{{ $cars_by_owner.MeasureHeading }}
+  <br>
+    {{ range $cars_by_owner_subheadings }}
+      &nbsp;&nbsp;&nbsp;&nbsp;{{ .ShortName }}<br>
+    {{ end }}
+  <br>
+  &nbsp;&nbsp;{{ $cars_by_type.MeasureHeading }}
+  <br>
+    {{ range $cars_by_type_subheadings }}
+      &nbsp;&nbsp;&nbsp;&nbsp;{{ .ShortName }}<br>
+    {{ end }}
+  <br>
+
+  {{ $speed.MeasureHeading }}
+  <br>
+    {{ range $speed_by_train_type_subheadings }}
+      &nbsp;&nbsp;{{ .ShortName }}<br>
+    {{ end }}
+  <br>
+
+  {{ $terminals.MeasureHeading }}
+  <br>
+    {{ range $terminals_by_city }}
+      &nbsp;&nbsp;{{ .CityOrYard }}{{ if isset . "Town" }}{{ if gt (len .Town) 0 }} ({{ .Town }}){{ end }}{{ end }}{{ if isset . "State" }}, {{ end }}{{ .State }}<br>
+    {{ end }}
+  <br>
+
+  <br><br>
+
+  <footer>
+    {{ $prpt.Copyright | markdownify }}
+  </footer>
+
+</body>
+
+</html>

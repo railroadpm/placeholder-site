@@ -14,7 +14,8 @@ import cssnano from 'cssnano';
 
 const browserSync = BrowserSync.create();
 const hugoBin = `./bin/hugo.${process.platform === 'win32' ? 'exe' : process.platform}`;
-const defaultArgs = ['-d', '../dist', '--cleanDestinationDir', '-s', 'site']; // 'dist' dir relative to ./bin where hugo is
+// const defaultArgs = ['-d', '../dist', '--cleanDestinationDir', '-s', 'site']; // 'dist' dir relative to ./bin where hugo is
+const defaultArgs = ['-d', '../dist', '-s', 'site']; // 'dist' dir relative to ./bin where hugo is
 
 if (process.env.DEBUG) {
   defaultArgs.unshift('--debug');
@@ -86,7 +87,7 @@ gulp.task('server', ['hugo', 'css', 'cms-assets', 'js', 'svg'], () => {
   gulp.watch('./src/js/**/*.js', ['js']);
   gulp.watch('./src/css/**/*.css', ['css']);
   gulp.watch('./site/static/img/icons-*.svg', ['svg']);
-  gulp.watch('./site/**/*', ['hugo']);
+  gulp.watch('./site/**/*', ['hugo', 'css', 'cms-assets', 'js', 'svg']);
 });
 
 function buildSite(cb, options) {

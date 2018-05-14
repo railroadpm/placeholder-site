@@ -1,0 +1,365 @@
+/* General */
+td {
+	font-size: 12px;	
+}
+a {
+	font-size: 12px;
+	color: navy;
+}
+li {
+	line-height: 20px;
+}
+.bold {
+	font-weight: bold;
+}
+a.siteTitle {
+	color: #ffff99;
+}
+
+/* Menu */
+/* updated menu that works with Firefox */
+div#tmnu {
+	position: absolute; 
+	top: 50px; left: 2px; width: 128px; 
+	font: 12px arial, verdana; 
+	z-index: 100;
+	text-align: left;
+}
+div#tmnu a {
+	display: block; 
+	width: 100%; 
+   	text-decoration: none; 
+	color: #FFFFFF; 
+	background: #368ECD;	
+	padding: 2px 0px 2px 2px;
+	border: 1px solid white;
+}
+div#tmnu a:hover {
+	background: #62B4E8;
+}
+
+div#smnu {
+	position: relative;
+	padding-left: 15px;
+	width: 113px;  
+	font: 12px arial, verdana; 
+	z-index: 100;
+	text-align: left;
+}
+div#smnu a {
+	display: block; 
+	width: 113px; 
+   	text-decoration: none; 
+	color: #FFF; 
+	background: #004272;	
+	padding: 2px 0px 2px 2px;
+	border: 1px solid #004272;
+}
+div#smnu a.selected {
+	display: block; 
+	width: 113px; 
+   	text-decoration: none; 
+	color: black; 
+	background: #ffcc66;	
+	padding: 2px 0px 2px 2px;
+	border: 1px solid beige;
+}
+div#smnu a:hover {
+	background: #ffcc66;
+	color: black;
+	border: 1px solid beige;
+}
+div.mnudvd {
+	border-bottom: 2px solid #004272; 	
+}
+/* end updated menu that works with Firefox */
+
+a.menu_lvl0 {
+	padding: 2px 3px 2px 3px;
+	border: 1px solid white;
+	width: 130px;
+	color: white;
+	background-color: #368ECD;
+	text-decoration: none;
+}
+a.menu_lvl0:hover {
+	background-color: #62B4E8;
+}
+a.menu_lvl0_sel {
+	background-color: #62B4E8; 
+	color: #FFF200;
+	padding: 2px 3px 2px 3px;
+	border: 1px solid white;
+	width: 130px;
+	text-decoration: none;
+}
+a.menu_lvl1 {
+	padding: 2px 3px 2px 3px;
+	width: 120px;
+	height: 6px;
+	color: white;
+	background-color: #004272;
+	border: 1px solid #004272;
+	text-decoration: none;	
+}
+a.menu_lvl1:hover {
+	background-color: #ffcc66;
+	color: black;
+	border: 1px solid beige;
+}
+a.menu_lvl1_sel {
+	padding: 2px 3px 2px 3px;
+	width: 120px;
+	height: 6px;
+	text-decoration: none;	
+	background-color: #ffcc66; /*#FFBC3A;*/
+	color: black;
+	border: 1px solid beige;
+}
+.menuArw {
+	font-size: 12px;
+	font-family: verdana;
+}
+a.tabmenu {
+
+}
+a.tabOn {
+	font-weight: bold;
+	text-decoration: none;
+}
+td.tabMenu {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+	
+
+/* template-related */
+td.topbanner {
+	color: #ffff99;	
+	font-weight: bold;
+	font-size: 12px;
+	font-family: verdana;
+}
+a.topbanner {
+	color: #ffff99;
+	text-decoration: none;
+}
+a.toplink {
+	color: #ffff99;
+}
+
+
+/* General Content-related */
+#content {
+	width: 500px;
+}
+.pageTitle {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* Performance */
+table.perfChart {
+	background-color: #3D3D3D;
+	border-left: 1px solid #C0C0C0;	
+	border-right: 1px solid #C0C0C0;		
+}
+
+table.perfChart td {
+	font-size: 12px;
+	border-bottom: 1px solid #C0C0C0;	
+	background-color: #C5E2FF;
+	padding: 3px;	
+	text-align: right;
+}
+table.perfChart td.itemHeader {
+	background-color: white;
+	text-align: center;
+	font-weight: bold;
+}
+table.perfChart td.secTitle {
+	font-weight: bold;
+	text-align: left;	
+}
+table.perfChart td.blockTitle {
+	padding-left: 20px;
+	text-align: left;
+}
+table.perfChart td.subtotal {
+	font-weight: bold;
+}
+
+table.perfChart td.revisionsTitle 
+{
+	background-color: white;
+	padding-left: 20px;
+	text-align: left;
+	font-weight: normal;
+	color: Navy;
+}
+table.perfChart td.revisionsVal 
+{
+	background-color: white;
+	font-weight: normal;
+	color: Navy;
+}
+
+table.perfChart td.divider {
+	height: 5px;
+	background-color: white;
+}
+table.perfChart td.subdivider {
+	border-bottom: 1px solid black;
+}
+
+table.perfChart td.unapproved {
+	background-color: yellow;
+}
+
+table.perfChart td.updated {
+	background-color: #DDFAFF;
+}
+
+/* Form */
+table.form {
+	border: 1px solid #B2AAA4;
+	background-color: #EDE8E1;
+}
+table.form td.header {
+	background-color: #D3BE96;
+	padding-left: 5px;
+	font-weight: bold;
+	color: navy;
+}
+td.item {
+	background-color: white;
+}
+table.form td.title {
+	font-weight: bold;
+	text-align: center;
+	background-color: #E7D7B7;
+}
+table.form td.total {
+	font-weight: bold;
+	border-top: 1px solid black;
+}
+
+table.btn {
+	width: 100%;
+	background-color: white;
+	border: 1px solid #B4B4B4;
+}
+table.btn td {
+	text-align: center;
+}
+
+/* form */
+.btn {
+	font-weight: bold;
+	width: 120px;
+	font-size: 12px;
+}
+.ctl {
+	width: 100;
+	text-align: right;
+}
+
+.ctl_text {
+	width: 100%;
+}
+
+.FormMessage, span.FormMessage
+{
+	color: navy;
+	font-size: 11px;
+	padding: 4px; 
+	background-color: #efefef;
+	width: 180px;
+	text-align: center;
+	border: 1px solid #cecece;
+}
+
+span.FormErrors, .FormErrors ul, .FormErrors
+{
+	color: red;
+	font-size: 11px;
+	padding: 8px 8px 8px 20px;
+}
+   
+div.RevisionData
+{
+	font-size:10px;
+	color: Red;
+	font-family: arial;
+	padding-top: 5px
+}
+
+div.Copyright
+{
+	font-size:10px;
+	color: black;
+	font-family: arial; 
+	padding-top: 5px
+}
+
+div.SpecialNotes
+{
+	font-size:12px;
+	color: blue;
+	font-family: arial;
+	padding-bottom: 5px;
+	width:800px
+}
+
+div.Explaination
+{
+	font-size:12px;
+	color: black;
+	font-family: arial;
+	padding-bottom: 5px;
+	width:800px
+}
+
+div.NANotes
+{
+	font-size:10px;
+	color: black;
+	font-family: arial;
+	padding-top: 5px
+}
+
+#Disclaimer
+{
+	font-size:12px;
+	color: black;
+	font-family: arial;
+	text-align: justify;
+	width:800px;
+
+}
+#Disclaimer p {
+	margin-top: 0.5em; 
+	margin-bottom: 0.5em;
+} 
+td.subTabOn {
+	height: 22px;
+	text-align: center;
+	background-color: #d7e7f7;
+}
+td.subTabOff {
+	height: 22px;
+	text-align: center;
+	background-color: #ffffff;
+}
+td.subTabEdge {
+	vertical-align: bottom;
+	width: 9px;
+	height: 24px;
+}
+
+table.disclaimer 
+{
+	color: black;
+	font-style: italic;
+	text-align: left;
+}
