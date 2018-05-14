@@ -11,6 +11,10 @@
   {{ $tracked_val := $.scratch.Get $measure_week_total_key }}
 
   <td nowrap="" class="subtotal right">
-    {{ (mul (div (float $total_val) (float $tracked_val)) (float 100)) | lang.NumFmt 1 }}&nbsp;
+    {{ if $total_val }}
+      {{ (mul (div (float $total_val) (float $tracked_val)) (float 100)) | lang.NumFmt 1 }}&nbsp;
+    {{ else }}
+      -&nbsp;
+    {{ end }}
   </td>
 {{ end }}          

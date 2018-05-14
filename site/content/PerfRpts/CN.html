@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  {{ $prpt_key := "BNSF" }}
+  {{ $prpt_key := "CN" }}
   {{ $prpt := index (where .Site.Data.Dimensions.Participant.Railroad "Key" $prpt_key) 0 }}
 
   <img src="{{ $prpt.Logo }}" alt="{{ $prpt.Key }} Logo">

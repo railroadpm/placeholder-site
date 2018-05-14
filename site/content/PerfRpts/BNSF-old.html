@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RPM</title>
+</head>
+
+<body>
+
+  {{ $weekly_rpt_config := .Site.Data.Config.WeeklyReport }}
+  {{ $weeks_count_current := $weekly_rpt_config.Displayed.CountOfWeeks.Current }}
+  {{ $weeks_count_historical := $weekly_rpt_config.Displayed.CountOfWeeks.Historical }}
+
+  {{ $params := (dict "Prpt" "BNSF" "WeeksCountCurrent" $weeks_count_current "WeeksCountHistorical" $weeks_count_historical) }}
+
+  {{ $prpt_verbiage := .Site.Data.Dimensions.Participant.Verbiage }}
+  {{ $prpt := index (where .Site.Data.Dimensions.Participant.Railroad "Key" $params.Prpt) 0 }}
+  {{ $weeks_all := .Site.Data.Dimensions.Period.Week }}
+  {{ $weeks_visible := sort (where $weeks_all "Hidden" "ne" true) "Key" "asc" }}
+
+  {{ $weeks_historical := last $weeks_count_historical $weeks_visible }}
+  {{ $weeks_current := last $weeks_count_current $weeks_visible }}
+
+  {{ $cars := .Site.Data.Dimensions.CarsOnLine }}
+  {{ $cars_by_owner := $cars.Owner }}
+  {{ $cars_by_owner_subheadings := sort $cars_by_owner.Type "Ord" "asc" }}
+  {{ $cars_by_type := $cars.Car }}
+  {{ $cars_by_type_subheadings := sort $cars_by_type.Type "Ord" "asc" }}
+
+  {{ $speed := .Site.Data.Dimensions.TrainSpeed }}
+  {{ $speed_by_train_type := $speed.Train }}
+  {{ $speed_by_train_type_subheadings := sort $speed_by_train_type.Type "Ord" "asc" }}
+
+  {{ $terminals := .Site.Data.Dimensions.TerminalDwell }}
+  {{ $terminals_for_prpt := index $terminals $params.Prpt }}
+  {{ $terminals_by_city := sort $terminals_for_prpt.Terminal "Ord" "asc" }}
+
+  {{ $prpt_rpts := index .Site.Data.Measures $params.Prpt }}
+
+  <img src="{{ $prpt.Logo }}" alt="{{ $prpt.Key }} Logo">
+  <h2>{{ $prpt.ShortName }}</h2>
+  <h2>Weekly Performance Report</h2>
+
+  <p>
+    <hr>
+    {{ $prpt_verbiage | markdownify }}
+    <hr>
+  </p>
+
+  <br><br>
+
+  <table cellspacing="0" cellpadding="0" class="perfChart" border="0">
+    <colgroup>
+      <col width="175">
+      <col width="50">
+      <col width="50">
+      <col width="1">
+      {{ range (seq $weeks_count_current) }}
+        <col width="50">
+      {{ end }}
+    </colgroup>
+    <tbody>
+      <tr>
+        <td class="subdivider" colspan="8"></td>
+      </tr>
+      <tr>
+        <td width="175" rowspan="2" class="itemHeader">&nbsp;</td>
+        <td colspan="2" class="itemHeader">Historical Average</td>
+        <td class="itemHeader" style="border-bottom: 0px;">&nbsp;</td>
+        <td colspan="4" class="itemHeader" style="padding-left: 0px; text-align: center">Week Ending</td>
+      </tr>
+      <tr>
+        <td nowrap="" class="itemHeader">1Q18&nbsp;</td>
+        <td nowrap="" class="itemHeader">Apr 2018&nbsp;</td>
+        <td class="itemHeader">&nbsp;</td>
+        {{ range $weeks_current }}
+          <td nowrap="" class="itemHeader">{{ .Day }}&nbsp;</td>
+        {{ end }}
+      </tr>
+      <tr>
+        <td class="revisionsTitle">Revisions</td>
+        <td class="revisionsVal">&nbsp;</td>
+        <td class="revisionsVal">&nbsp;</td>
+        <td nowrap="" class="itemHeader">&nbsp;</td>
+        <td class="revisionsVal">&nbsp;</td>
+        <td class="revisionsVal">&nbsp;</td>
+        <td class="revisionsVal">&nbsp;</td>
+        <td class="revisionsVal">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="subdivider" colspan="8"></td>
+      </tr>
+
+      <tr>
+        <td class="divider subdivider" colspan="8"></td>
+      </tr>
+
+      <tr><td class="secTitle" colspan="8">{{ $cars.MeasureHeading }}</td></tr>
+
+      <tr><td class="blockTitle subtotal" colspan="8">{{ $cars_by_owner.MeasureHeading }}</td></tr>
+
+      {{ $measure_key_prefix := "CarsOnLine_ByCarOwner_" }}
+      {{ range $subheading_index, $subheading := $cars_by_owner_subheadings }}
+        <tr>
+          <td nowrap="" class="blockTitle">{{ $subheading.ShortName }}&nbsp;</td>
+
+          <td nowrap="" class="item">37,649&nbsp;</td>
+          <td nowrap="" class="item">36,060&nbsp;</td>
+          
+          <td nowrap="" class="item">&nbsp;</td>
+
+          {{ $subheading_key := $subheading.Key }}
+          {{ $measure_key := printf "%s%s" $measure_key_prefix $subheading_key }}
+
+          {{ partial "perf_rpts/weekly-measure-cols" (dict "weeks" $weeks_current "rpts" $prpt_rpts "subKey" $subheading_key "measureKey" $measure_key "keyIndex" $subheading_index "track" "Private" "scratch" $.Scratch) }}
+        </tr>
+      {{ end }}
+      
+      <tr>
+        <td nowrap="" class="blockTitle subtotal">Total&nbsp;</td>
+        <td nowrap="" class="subtotal right">160,265&nbsp;</td>
+        <td nowrap="" class="subtotal right">155,991&nbsp;</td>
+        <td nowrap="" class="item">&nbsp;</td>
+
+        {{ partial "perf_rpts/weekly-total-cols" (dict "weeks" $weeks_current "prefix" $measure_key_prefix "scratch" $.Scratch) }}
+      </tr>
+      
+      <tr>
+        <td nowrap="" class="blockTitle subtotal">Pct. Private&nbsp;</td>
+        <td nowrap="" class="subtotal right">65.3&nbsp;</td>
+        <td nowrap="" class="subtotal right">65.9&nbsp;</td>
+        <td nowrap="" class="item">&nbsp;</td>
+
+        {{ partial "perf_rpts/weekly-pct-cols" (dict "weeks" $weeks_current "prefix" $measure_key_prefix "tracked" "Private" "scratch" $.Scratch) }}
+      </tr>
+
+      <tr><td colspan="8" class="subdivider"></td></tr>
+
+      <tr><td class="blockTitle subtotal" colspan="8">{{ $cars_by_type.MeasureHeading }}</td></tr>
+
+      {{ $measure_key_prefix := "CarsOnLine_ByCarType_" }}
+      {{ range $subheading_index, $subheading := $cars_by_type_subheadings }}
+        <tr>
+          <td nowrap="" class="blockTitle">{{ $subheading.ShortName }}&nbsp;</td>
+
+          <td nowrap="" class="item">11,024&nbsp;</td>
+          <td nowrap="" class="item">10,531&nbsp;</td>
+
+          <td nowrap="" class="item">&nbsp;</td>
+
+          {{ $subheading_key := $subheading.Key }}
+          {{ $measure_key := printf "%s%s" $measure_key_prefix $subheading_key }}
+
+          {{ partial "perf_rpts/weekly-measure-cols" (dict "weeks" $weeks_current "rpts" $prpt_rpts "subKey" $subheading_key "measureKey" $measure_key "keyIndex" $subheading_index "track" nil "scratch" $.Scratch) }}
+        </tr>
+      {{ end }}
+
+      <tr><td nowrap="" class="blockTitle subtotal">Total&nbsp;</td><td nowrap="" class="subtotal right">160,265&nbsp;</td><td nowrap="" class="subtotal right">155,991&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="subtotal right">155,765&nbsp;</td><td nowrap="" class="subtotal right">155,299&nbsp;</td><td nowrap="" class="subtotal right">156,103&nbsp;</td><td nowrap="" class="subtotal right">155,577&nbsp;</td></tr>
+
+      <tr><td class="subdivider" colspan="8"></td></tr>
+      <tr><td class="divider subdivider" colspan="8"></td></tr>
+
+      <tr><td class="secTitle" colspan="8">Train Speed (Miles per Hour)</td></tr>
+      <tr><td nowrap="" class="blockTitle">Intermodal&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">25.8&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">25.7&nbsp;</td><td nowrap="" class="item">27.1&nbsp;</td><td nowrap="" class="item">25.6&nbsp;</td><td nowrap="" class="item">25.1&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Manifest&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">22.3&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">22.4&nbsp;</td><td nowrap="" class="item">22.5&nbsp;</td><td nowrap="" class="item">22.5&nbsp;</td><td nowrap="" class="item">21.8&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Multilevel&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">-&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Coal Unit&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">23.2&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">23.9&nbsp;</td><td nowrap="" class="item">23.3&nbsp;</td><td nowrap="" class="item">22.4&nbsp;</td><td nowrap="" class="item">22.3&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Grain Unit&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">21.0&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">22.0&nbsp;</td><td nowrap="" class="item">21.2&nbsp;</td><td nowrap="" class="item">20.8&nbsp;</td><td nowrap="" class="item">19.7&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle subtotal">All Trains&nbsp;</td><td nowrap="" class="subtotal right">-&nbsp;</td><td nowrap="" class="subtotal right">23.2&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="subtotal right">23.2&nbsp;</td><td nowrap="" class="subtotal right">23.7&nbsp;</td><td nowrap="" class="subtotal right">23.2&nbsp;</td><td nowrap="" class="subtotal right">22.6&nbsp;</td></tr>
+      <tr><td class="subdivider" colspan="8"></td></tr>
+      <tr><td class="divider subdivider" colspan="8"></td></tr>
+      <tr><td class="secTitle" colspan="8">Terminal Dwell (Hours)</td></tr>
+      <tr><td nowrap="" class="blockTitle">Harrison Yard (Memphis), TN&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">22.1&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">20.3&nbsp;</td><td nowrap="" class="item">22.7&nbsp;</td><td nowrap="" class="item">22.7&nbsp;</td><td nowrap="" class="item">23.9&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Fond du Lac Yard, WI&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">31.1&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">28.0&nbsp;</td><td nowrap="" class="item">34.1&nbsp;</td><td nowrap="" class="item">30.0&nbsp;</td><td nowrap="" class="item">27.8&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Jackson Yard, MS&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">15.0&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">13.9&nbsp;</td><td nowrap="" class="item">13.0&nbsp;</td><td nowrap="" class="item">16.5&nbsp;</td><td nowrap="" class="item">16.6&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">MacMillan Yard (Toronto), ON&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">22.4&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">19.2&nbsp;</td><td nowrap="" class="item">23.6&nbsp;</td><td nowrap="" class="item">27.0&nbsp;</td><td nowrap="" class="item">21.8&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Markham Yard, IL&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">13.0&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">13.3&nbsp;</td><td nowrap="" class="item">13.5&nbsp;</td><td nowrap="" class="item">13.3&nbsp;</td><td nowrap="" class="item">9.4&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Symington Yard (Winnipeg), MB&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">28.1&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">32.2&nbsp;</td><td nowrap="" class="item">27.3&nbsp;</td><td nowrap="" class="item">24.3&nbsp;</td><td nowrap="" class="item">27.6&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Tascherau Yard (Montreal), QC&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">13.2&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">12.3&nbsp;</td><td nowrap="" class="item">13.0&nbsp;</td><td nowrap="" class="item">13.5&nbsp;</td><td nowrap="" class="item">13.7&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Thornton Yard (Vancouver), BC&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">10.5&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">11.5&nbsp;</td><td nowrap="" class="item">11.1&nbsp;</td><td nowrap="" class="item">11.1&nbsp;</td><td nowrap="" class="item">9.9&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle">Walker Yard (Edmonton), AB&nbsp;</td><td nowrap="" class="item">-&nbsp;</td><td nowrap="" class="item">23.0&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="item">22.1&nbsp;</td><td nowrap="" class="item">22.8&nbsp;</td><td nowrap="" class="item">21.7&nbsp;</td><td nowrap="" class="item">18.8&nbsp;</td></tr>
+      <tr><td nowrap="" class="blockTitle subtotal">Entire Railroad&nbsp;</td><td nowrap="" class="subtotal right">-&nbsp;</td><td nowrap="" class="subtotal right">17.7&nbsp;</td><td nowrap="" class="item">&nbsp;</td><td nowrap="" class="subtotal right">17.5&nbsp;</td><td nowrap="" class="subtotal right">18.1&nbsp;</td><td nowrap="" class="subtotal right">17.4&nbsp;</td><td nowrap="" class="subtotal right">16.6&nbsp;</td></tr>
+      <tr><td colspan="7" class="subdivider"></td></tr>
+    </tbody>
+  </table>
+
+  <br><br>
+
+  <footer>
+    {{ $prpt.Copyright | markdownify }}
+  </footer>
+
+</body>
+
+</html>

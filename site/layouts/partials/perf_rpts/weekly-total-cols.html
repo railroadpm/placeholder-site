@@ -7,6 +7,8 @@
   {{ $measure_week_total_key := printf "%s%s%s" $.prefix $week.Key "_total" }}
 
   <td nowrap="" class="subtotal right">
-    {{ ($.scratch.Get $measure_week_total_key) | lang.NumFmt 0 }}&nbsp;
+    {{ if ($.scratch.Get $measure_week_total_key) }}
+      {{ ($.scratch.Get $measure_week_total_key) | lang.NumFmt 0 }}&nbsp;
+    {{ end }}
   </td>
 {{ end }}          
