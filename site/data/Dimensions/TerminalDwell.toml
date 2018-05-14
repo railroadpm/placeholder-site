@@ -14,7 +14,8 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Barstow'
-  CityOrYard = ''
+  Ord = 1
+  CityOrYard = 'Barstow'
   Town = ''
   State = 'CA'
   Country = 'USA'
@@ -23,6 +24,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Denver'
+  Ord = 2
   CityOrYard = 'Denver'
   Town = ''
   State = 'CO'
@@ -32,6 +34,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'FortWorth'
+  Ord = 3
   CityOrYard = 'Fort Worth'
   Town = ''
   State = 'TX'
@@ -41,6 +44,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Galesburg'
+  Ord = 4
   CityOrYard = 'Galesburg'
   Town = ''
   State = 'IL'
@@ -50,6 +54,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Houston'
+  Ord = 5
   CityOrYard = 'Houston'
   Town = ''
   State = 'TX'
@@ -59,6 +64,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'KansasCity'
+  Ord = 6
   CityOrYard = 'Kansas City'
   Town = ''
   State = 'KS'
@@ -68,6 +74,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Lincoln'
+  Ord = 7
   CityOrYard = 'Lincoln'
   Town = ''
   State = 'NE'
@@ -77,6 +84,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Memphis'
+  Ord = 8
   CityOrYard = 'Memphis'
   Town = ''
   State = 'TN'
@@ -86,6 +94,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Northtown'
+  Ord = 9
   CityOrYard = 'Northtown'
   Town = ''
   State = 'MN'
@@ -95,6 +104,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Pasco'
+  Ord = 10
   CityOrYard = 'Pasco'
   Town = ''
   State = 'WA'
@@ -104,6 +114,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'Tulsa'
+  Ord = 11
   CityOrYard = 'Tulsa'
   Town = ''
   State = 'OK'
@@ -113,6 +124,7 @@ Key = 'BNSF'
 
   [[BNSF.Terminal]]
   Key = 'EntireRailroad'
+  Ord = 12
   CityOrYard = 'Entire Railroad'
 
 [CN]
@@ -120,6 +132,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'HarrisonYard'
+  Ord = 1
   CityOrYard = 'Harrison Yard'
   Town = 'Memphis'
   State = 'TN'
@@ -129,6 +142,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'FDLYard'
+  Ord = 2
   CityOrYard = 'Fond du Lac Yard'
   Town = ''
   State = 'WI'
@@ -138,6 +152,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'JacksonYard'
+  Ord = 3
   CityOrYard = 'Jackson Yard'
   Town = ''
   State = 'MS'
@@ -147,6 +162,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'MacMillanYard'
+  Ord = 4
   CityOrYard = 'MacMillan Yard'
   Town = 'Toronto'
   State = 'ON'
@@ -156,6 +172,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'MarkhamYard'
+  Ord = 5
   CityOrYard = 'Markham Yard'
   Town = ''
   State = 'IL'
@@ -165,6 +182,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'SymingtonYard'
+  Ord = 6
   CityOrYard = 'Symington Yard'
   Town = 'Winnipeg'
   State = 'MB'
@@ -174,6 +192,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'TascherauYard'
+  Ord = 7
   CityOrYard = 'Tascherau Yard'
   Town = 'Montreal'
   State = 'QC'
@@ -183,6 +202,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'ThorntonYard'
+  Ord = 8
   CityOrYard = 'Thornton Yard'
   Town = 'Vancouver'
   State = 'BC'
@@ -192,6 +212,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'WalkerYard'
+  Ord = 9
   CityOrYard = 'Walker Yard'
   Town = 'Edmonton'
   State = 'AB'
@@ -201,6 +222,7 @@ Key = 'CN'
 
   [[CN.Terminal]]
   Key = 'EntireRailroad'
+  Ord = 10
   CityOrYard = 'Entire Railroad'
 
 [KCS]
@@ -208,6 +230,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'Jackson'
+  Ord = 1
   CityOrYard = 'Jackson'
   Town = ''
   State = 'MS'
@@ -217,6 +240,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'KansasCity'
+  Ord = 2
   CityOrYard = 'Kansas City'
   Town = ''
   State = 'MO'
@@ -226,6 +250,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'Laredo'
+  Ord = 3
   CityOrYard = 'Laredo'
   Town = ''
   State = 'TX'
@@ -235,6 +260,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'Shreveport'
+  Ord = 4
   CityOrYard = 'Shreveport'
   Town = ''
   State = 'LA'
@@ -244,6 +270,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'Monterrey'
+  Ord = 5
   CityOrYard = 'Monterrey'
   Town = ''
   State = 'NL'
@@ -253,6 +280,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'NuevoLaredo'
+  Ord = 6
   CityOrYard = 'Nuevo Laredo'
   Town = ''
   State = 'TM'
@@ -262,6 +290,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'SanLuisPotosi'
+  Ord = 7
   CityOrYard = 'San Luis Potosi'
   Town = ''
   State = 'SL'
@@ -271,6 +300,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'Sanchez'
+  Ord = 8
   CityOrYard = 'Sanchez'
   Town = ''
   State = 'TM'
@@ -280,6 +310,7 @@ Key = 'KCS'
 
   [[KCS.Terminal]]
   Key = 'EntireRailroad'
+  Ord = 9
   CityOrYard = 'Entire Railroad'
 
 [NS]
@@ -287,6 +318,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Allentown'
+  Ord = 1
   CityOrYard = 'Allentown'
   Town = ''
   State = 'PA'
@@ -296,6 +328,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Bellevue'
+  Ord = 2
   CityOrYard = 'Bellevue'
   Town = ''
   State = 'OH'
@@ -305,6 +338,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Birmingham'
+  Ord = 3
   CityOrYard = 'Birmingham'
   Town = ''
   State = 'AL'
@@ -314,6 +348,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Chattanooga'
+  Ord = 4
   CityOrYard = 'Chattanooga'
   Town = ''
   State = 'TN'
@@ -323,6 +358,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Columbus'
+  Ord = 5
   CityOrYard = 'Columbus'
   Town = ''
   State = 'OH'
@@ -332,6 +368,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Conway'
+  Ord = 6
   CityOrYard = 'Conway'
   Town = ''
   State = 'PA'
@@ -341,6 +378,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Decatur'
+  Ord = 7
   CityOrYard = 'Decatur'
   Town = ''
   State = 'IL'
@@ -350,6 +388,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Elkhart'
+  Ord = 8
   CityOrYard = 'Elkhart'
   Town = ''
   State = 'IN'
@@ -359,6 +398,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Atlanta'
+  Ord = 9
   CityOrYard = 'Atlanta'
   Town = ''
   State = 'GA'
@@ -368,6 +408,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Linwood'
+  Ord = 10
   CityOrYard = 'Linwood'
   Town = ''
   State = 'NC'
@@ -377,6 +418,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Macon'
+  Ord = 11
   CityOrYard = 'Macon'
   Town = ''
   State = 'GA'
@@ -386,6 +428,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'NewOrleans'
+  Ord = 12
   CityOrYard = 'New Orleans'
   Town = ''
   State = 'LA'
@@ -395,6 +438,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Roanoke'
+  Ord = 13
   CityOrYard = 'Roanoke'
   Town = ''
   State = 'VA'
@@ -404,6 +448,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'Sheffield'
+  Ord = 14
   CityOrYard = 'Sheffield'
   Town = ''
   State = 'AL'
@@ -413,6 +458,7 @@ Key = 'NS'
 
   [[NS.Terminal]]
   Key = 'EntireRailroad'
+  Ord = 15
   CityOrYard = 'Entire Railroad'
 
 [UP]
@@ -420,6 +466,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'Chicago'
+  Ord = 1
   CityOrYard = 'Chicago'
   Town = 'Proviso'
   State = 'IL'
@@ -429,6 +476,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'FortWorth'
+  Ord = 2
   CityOrYard = 'Fort Worth'
   Town = ''
   State = 'TX'
@@ -438,6 +486,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'Hinkle'
+  Ord = 3
   CityOrYard = 'Hinkle'
   Town = ''
   State = 'OR'
@@ -447,6 +496,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'HoustonEnglewood'
+  Ord = 4
   CityOrYard = 'Houston'
   Town = 'Englewood'
   State = 'TX'
@@ -456,6 +506,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'HoustonSettegast'
+  Ord = 5
   CityOrYard = 'Houston'
   Town = 'Settegast'
   State = 'TX'
@@ -465,6 +516,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'KansasCity'
+  Ord = 6
   CityOrYard = 'Kansas City'
   Town = ''
   State = 'MO'
@@ -474,6 +526,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'Livonia'
+  Ord = 7
   CityOrYard = 'Livonia'
   Town = ''
   State = 'LA'
@@ -483,6 +536,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'NorthLittleRock'
+  Ord = 8
   CityOrYard = 'North Little Rock'
   Town = ''
   State = 'AR'
@@ -492,6 +546,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'NorthPlatteEast'
+  Ord = 9
   CityOrYard = 'North Platte East'
   Town = ''
   State = 'NE'
@@ -501,6 +556,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'NorthPlatteWest'
+  Ord = 10
   CityOrYard = 'North Platte West'
   Town = ''
   State = 'NE'
@@ -510,6 +566,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'PineBluff'
+  Ord = 11
   CityOrYard = 'Pine Bluff'
   Town = ''
   State = 'AR'
@@ -519,6 +576,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'Roseville'
+  Ord = 12
   CityOrYard = 'Roseville'
   Town = ''
   State = 'CA'
@@ -528,6 +586,7 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'WestColton'
+  Ord = 13
   CityOrYard = 'West Colton'
   Town = ''
   State = 'CA'
@@ -537,4 +596,5 @@ Key = 'UP'
 
   [[UP.Terminal]]
   Key = 'EntireRailroad'
+  Ord = 14
   CityOrYard = 'Entire Railroad'

@@ -13,6 +13,7 @@ Verbiage = '''
 
 [[Railroad]]
 Key = 'BNSF'
+Ord = 1
 ShortName = 'BNSF Railway Company'
 LongName = 'BNSF Railway Company'
 Logo = '/img/bnsf_railway.jpg'
@@ -25,6 +26,7 @@ Copyright = '''
 
 [[Railroad]]
 Key = 'CN'
+Ord = 2
 ShortName = 'CN'
 LongName = 'Canadian National Railway Co.'
 Logo = '/img/cn_logo.gif'
@@ -37,6 +39,7 @@ Copyright = '''
 
 [[Railroad]]
 Key = 'KCS'
+Ord = 3
 ShortName = 'The Kansas City Southern Railway and Kansas City Southern de Mexico, S.A. de C.V. Consolidated'
 LongName = 'The Kansas City Southern Railway and Kansas City Southern de Mexico, S.A. de C.V. Consolidated'
 Logo = '/img/KCSM_small.jpg'
@@ -48,6 +51,7 @@ Copyright = '''
 
 [[Railroad]]
 Key = 'NS'
+Ord = 4
 ShortName = 'Norfolk Southern'
 LongName = 'Norfolk Southern Corporation'
 Logo = '/img/norfolksouthernlogo.jpg'
@@ -59,6 +63,7 @@ Copyright = '''
 
 [[Railroad]]
 Key = 'UP'
+Ord = 5
 ShortName = 'Union Pacific Railroad'
 LongName = 'Union Pacific Railroad'
 Logo = '/img/up_shield.gif'
@@ -70,6 +75,7 @@ Copyright = '''
 
 [[Railroad]]
 Key = 'AllOtherRailroads'
+Ord = 6
 ShortName = 'All Other Railroads'
 LongName = 'All Other Railroads'
 Logo = ''

@@ -31,6 +31,8 @@
   {{ $speed := .Site.Data.Dimensions.TrainSpeed }}
   {{ $speed_by_type := $speed.Train }}
 
+  {{ $terminal := .Site.Data.Dimensions.TerminalDwell }}
+  {{ $terminal_by_city := (index $terminal $params.Pcpt).Terminal }}
 
     <br><br>
     <br><br>
@@ -73,6 +75,13 @@
       <br>
         {{ range $speed_by_type.Type }}
           &nbsp;&nbsp;{{ .ShortName }}<br>
+        {{ end }}
+      <br>
+
+      {{ $terminal.MeasureHeading }}
+      <br>
+        {{ range $terminal_by_city }}
+          &nbsp;&nbsp;{{ .CityOrYard }}{{ if isset . "Town" }}{{ if gt (len .Town) 0 }} ({{ .Town }}){{ end }}{{ end }}{{ if isset . "State" }}, {{ end }}{{ .State }}<br>
         {{ end }}
       <br>
 
