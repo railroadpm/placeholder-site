@@ -26,13 +26,17 @@
 
   {{ $cars := .Site.Data.Dimensions.CarsOnLine }}
   {{ $cars_by_owner := $cars.Owner }}
+  {{ $cars_by_owner_subheadings := sort $cars_by_owner.Type "Ord" "asc" }}
   {{ $cars_by_type := $cars.Car }}
+  {{ $cars_by_type_subheadings := sort $cars_by_type.Type "Ord" "asc" }}
 
   {{ $speed := .Site.Data.Dimensions.TrainSpeed }}
-  {{ $speed_by_type := $speed.Train }}
+  {{ $speed_by_train_type := $speed.Train }}
+  {{ $speed_by_train_type_subheadings := sort $speed_by_train_type.Type "Ord" "asc" }}
 
-  {{ $terminal := .Site.Data.Dimensions.TerminalDwell }}
-  {{ $terminal_by_city := (index $terminal $params.Pcpt).Terminal }}
+  {{ $terminals := .Site.Data.Dimensions.TerminalDwell }}
+  {{ $terminals_for_prpt := index $terminals $params.Pcpt }}
+  {{ $terminals_by_city := sort $terminals_for_prpt.Terminal "Ord" "asc" }}
 
     <br><br>
     <br><br>
@@ -60,27 +64,27 @@
       <br>
       &nbsp;&nbsp;{{ $cars_by_owner.MeasureHeading }}
       <br>
-        {{ range $cars_by_owner.Type }}
+        {{ range $cars_by_owner_subheadings }}
           &nbsp;&nbsp;&nbsp;&nbsp;{{ .ShortName }}<br>
         {{ end }}
       <br>
       &nbsp;&nbsp;{{ $cars_by_type.MeasureHeading }}
       <br>
-        {{ range $cars_by_type.Type }}
+        {{ range $cars_by_type_subheadings }}
           &nbsp;&nbsp;&nbsp;&nbsp;{{ .ShortName }}<br>
         {{ end }}
       <br>
 
       {{ $speed.MeasureHeading }}
       <br>
-        {{ range $speed_by_type.Type }}
+        {{ range $speed_by_train_type_subheadings }}
           &nbsp;&nbsp;{{ .ShortName }}<br>
         {{ end }}
       <br>
 
-      {{ $terminal.MeasureHeading }}
+      {{ $terminals.MeasureHeading }}
       <br>
-        {{ range $terminal_by_city }}
+        {{ range $terminals_by_city }}
           &nbsp;&nbsp;{{ .CityOrYard }}{{ if isset . "Town" }}{{ if gt (len .Town) 0 }} ({{ .Town }}){{ end }}{{ end }}{{ if isset . "State" }}, {{ end }}{{ .State }}<br>
         {{ end }}
       <br>
