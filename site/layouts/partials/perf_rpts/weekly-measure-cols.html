@@ -1,0 +1,31 @@
+<!--
+  $.weeks         Columns
+  $.rpts          Participant Weekly Reports
+  $.subKey        Subheading Key (Measure Key component)
+  $.measureKey    Measure Key
+  $.keyIndex      0-based index of the Measure Key
+  $.track         Specific Measure to track in Scratch
+  $.scratch       Should contain totals based on Keys
+-->
+{{ range $week_index, $week := $.weeks }}
+  {{ $prpt_rpt := index $.rpts $week.Key }}
+  {{ $measure_val := index $prpt_rpt $.measureKey }}
+
+  {{ $measure_week_total_key := printf "%s%s%s" "CarsOnLine_ByCarOwner_" $week.Key "_total" }}
+
+  {{ if eq $.keyIndex 0 }}
+    {{ $.scratch.Set $measure_week_total_key 0 }}
+  {{ end }}
+  {{ $.scratch.Add $measure_week_total_key $measure_val }}
+
+  {{ if $.track }}
+    {{ if eq $.subKey $.track }}
+      {{ $track_week_val_key := printf "%s%s%s" $.track $week.Key "_val" }}
+      {{ $.scratch.Set $track_week_val_key $measure_val }}
+    {{ end }}
+  {{ end }}
+
+  <td nowrap="" class="item">
+    {{ $measure_val | lang.NumFmt 0 }}&nbsp;
+  </td>
+{{ end }}          

@@ -1,0 +1,12 @@
+<!--
+  $.weeks     Columns
+  $.prefix    Measure Key prefix
+  $.scratch   Should contain totals based on Keys
+-->
+{{ range $week_index, $week := $.weeks }}
+  {{ $measure_week_total_key := printf "%s%s%s" $.prefix $week.Key "_total" }}
+
+  <td nowrap="" class="subtotal right">
+    {{ ($.scratch.Get $measure_week_total_key) | lang.NumFmt 0 }}&nbsp;
+  </td>
+{{ end }}          
