@@ -108,8 +108,10 @@
       {{ range $subheading_index, $subheading := $cars_by_owner_subheadings }}
         <tr>
           <td nowrap="" class="blockTitle">{{ $subheading.ShortName }}&nbsp;</td>
+
           <td nowrap="" class="item">37,649&nbsp;</td>
           <td nowrap="" class="item">36,060&nbsp;</td>
+          
           <td nowrap="" class="item">&nbsp;</td>
 
           {{ $subheading_key := $subheading.Key }}
@@ -145,14 +147,16 @@
       {{ range $subheading_index, $subheading := $cars_by_type_subheadings }}
         <tr>
           <td nowrap="" class="blockTitle">{{ $subheading.ShortName }}&nbsp;</td>
+
           <td nowrap="" class="item">11,024&nbsp;</td>
           <td nowrap="" class="item">10,531&nbsp;</td>
+
           <td nowrap="" class="item">&nbsp;</td>
 
           {{ $subheading_key := $subheading.Key }}
           {{ $measure_key := printf "%s%s" $measure_key_prefix $subheading_key }}
 
-          {{ partial "perf_rpts/weekly-measure-cols" (dict "weeks" $weeks_current "rpts" $prpt_rpts "subKey" $subheading_key "measureKey" $measure_key "keyIndex" $subheading_index "track" "Private" "scratch" $.Scratch) }}
+          {{ partial "perf_rpts/weekly-measure-cols" (dict "weeks" $weeks_current "rpts" $prpt_rpts "subKey" $subheading_key "measureKey" $measure_key "keyIndex" $subheading_index "track" nil "scratch" $.Scratch) }}
         </tr>
       {{ end }}
 
