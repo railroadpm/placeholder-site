@@ -29,5 +29,9 @@
     <td nowrap="" class="item">
       {{ $measure_val | lang.NumFmt 0 }}&nbsp;
     </td>
+  {{ else }}
+    <td nowrap="" class="item">
+      -&nbsp;
+    </td>
   {{ end }}
 {{ end }}          

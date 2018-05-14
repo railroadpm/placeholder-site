@@ -9,6 +9,8 @@
   <td nowrap="" class="subtotal right">
     {{ if ($.scratch.Get $measure_week_total_key) }}
       {{ ($.scratch.Get $measure_week_total_key) | lang.NumFmt 0 }}&nbsp;
+    {{ else }}
+      -&nbsp;      
     {{ end }}
   </td>
 {{ end }}          
