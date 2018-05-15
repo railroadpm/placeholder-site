@@ -14,16 +14,10 @@
 
   <img src="{{ $prpt.Logo }}" alt="{{ $prpt.Key }} Logo">
   <h2>{{ $prpt.ShortName }}</h2>
+  
   <h2>Weekly Performance Report</h2>
 
-  <p>
-    <hr>
-    {{ $prpt_verbiage := .Site.Data.Dimensions.Participant.Verbiage }}
-    {{ $prpt_verbiage | markdownify }}
-    <hr>
-  </p>
-
-  <br><br>
+  {{ partial "perf_rpts/all-participants-verbiage" (dict "verbiage" .Site.Data.Dimensions.Participant.Verbiage) }}
 
   {{ partial "perf_rpts/table" (dict "data" .Site.Data "prptKey" $prpt_key "scratch" $.Scratch) }}
 
