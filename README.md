@@ -1,4 +1,4 @@
-# AAR RailroadPM 2.0 Site - Under Construction
+# AAR RailroadPM 2.0 Placeholder Site
 
 This site was originally created by cloning the [Netlify One-Click Hugo CMS project](https://github.com/netlify-templates/one-click-hugo-cms). The relevant information from the original README file appears below, with a few edits to clarify and adapt the content to the **RailroadPM** project.
 
@@ -6,7 +6,7 @@ This site was originally created by cloning the [Netlify One-Click Hugo CMS proj
 
 The original template for this site was built with [Victor Hugo](https://github.com/netlify/victor-hugo) and [Netlify CMS](https://github.com/netlify/netlify-cms), designed and developed by [Darin Dimitroff](http://www.darindimitroff.com/), [spacefarm.digital](https://www.spacefarm.digital).
 
-### How We Got Started with RailroadPM
+### How We Got Started With This RailroadPM Site
 
 First we installed [Node.js](https://nodejs.org/en/download/), [Hugo](https://gohugo.io/getting-started/installing/) and [Yarn](https://yarnpkg.com/lang/en/docs/install/). Then we kicked-off development of this site by cloning [this repository](https://github.com/netlify-templates/one-click-hugo-cms), and then running `yarn` from the new folder to install all required dependencies.
 
